@@ -9,25 +9,13 @@ import navIcon2 from "../assets/img/git1.svg";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
   return (
-    <Navbar className={scrolled ? "scrolled" : ""} expand="lg">
+    <Navbar className="scrolled" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <img className="logo-img" src={logo} alt="Logo" />
@@ -81,12 +69,8 @@ const NavBar = () => {
             </div>
           </span>
           <span className="navbar-text">
-            <a
-              target="_blank"
-              href="https://profile.indeed.com/document/view"
-              download
-            >
-              <button>Checkout CV</button>
+            <a target="_blank" href="ismarcv.pdf" download>
+              <button>Download CV</button>
             </a>
           </span>
           <span className="navbar-text">

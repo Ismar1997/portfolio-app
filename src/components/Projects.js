@@ -43,7 +43,7 @@ const Projects = () => {
         "The portfolio website that display all of my projects and the skills I offer to my clients.",
       imgURL: projImg4,
       projectgit: "https://github.com/Ismar1997/portfolio-app",
-      projectdemo: "",
+      projectdemo: "https://playful-halva-0ca2b6.netlify.app/",
     },
   ];
 
