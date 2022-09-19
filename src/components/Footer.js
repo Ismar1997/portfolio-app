@@ -21,11 +21,7 @@ const Footer = () => {
                 <img src={navIcon2} alt="Icon" />
               </a>
             </div>
-            <a
-              className="footer-btn"
-              href="../assets/files/ismarcv.pdf"
-              download
-            >
+            <a className="footer-btn" href="ismarcv.pdf" download>
               <button>Download CV</button>
             </a>
             <p>Copyright 2022. All Rights Reserved by Ismar.</p>
