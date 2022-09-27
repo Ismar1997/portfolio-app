@@ -14,10 +14,13 @@ const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center ">
             <div className="social-icon">
-              <a href="#">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ismar-fazli%C4%87-12a507222/"
+              >
                 <img src={navIcon1} alt="Icon" />
               </a>
-              <a href="#">
+              <a target="_blank" href="https://github.com/Ismar1997">
                 <img src={navIcon2} alt="Icon" />
               </a>
             </div>
