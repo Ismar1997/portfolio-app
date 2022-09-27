@@ -9,18 +9,21 @@ import navIcon2 from "../assets/img/git1.svg";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-
+  const [expanded, setExpanded] = useState(false);
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
   return (
-    <Navbar className="scrolled" expand="lg">
+    <Navbar className="scrolled" expanded={expanded} expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <img className="logo-img" src={logo} alt="Logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpanded(expanded ? false : "expanded")}
+        >
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
@@ -30,7 +33,10 @@ const NavBar = () => {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}
+              onClick={() => {
+                onUpdateActiveLink("skills");
+                setExpanded(false);
+              }}
             >
               HOME
             </Nav.Link>
@@ -39,7 +45,10 @@ const NavBar = () => {
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("skills")}
+              onClick={() => {
+                onUpdateActiveLink("skills");
+                setExpanded(false);
+              }}
             >
               SKILLS
             </Nav.Link>
@@ -48,7 +57,10 @@ const NavBar = () => {
               className={
                 activeLink === "project" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("project")}
+              onClick={() => {
+                onUpdateActiveLink("skills");
+                setExpanded(false);
+              }}
             >
               PROJECTS
             </Nav.Link>
@@ -74,7 +86,7 @@ const NavBar = () => {
             </a>
           </span>
           <span className="navbar-text">
-            <a href="#connect">
+            <a href="#connect" onClick={() => setExpanded(false)}>
               <button>Let's Connect</button>
             </a>
           </span>
