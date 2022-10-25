@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
-
+import { useState } from "react";
 const ProjectCard = ({
   title,
   technologies,
@@ -9,6 +9,10 @@ const ProjectCard = ({
   projectgit,
   projectdemo,
 }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", function (event) {
+    setWidth(window.innerWidth);
+  });
   return (
     <Container>
       <Row>
@@ -28,16 +32,16 @@ const ProjectCard = ({
           xs={{ span: 6, offset: 3 }}
         >
           <Row>
-            <div className="proj-btn">
+            <div className={width < 1200 ? "proj-btn " : "proj-btn mt-4"}>
               <a href={projectgit} target="_blank">
-                <button>Code</button>
+                <button>CODE</button>
               </a>
             </div>
           </Row>
           <Row>
-            <div className="proj-btn">
+            <div className="proj-btn ">
               <a href={projectdemo} target="_blank">
-                <button>Demo</button>
+                <button>DEMO</button>
               </a>
             </div>
           </Row>

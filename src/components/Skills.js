@@ -43,7 +43,7 @@ const Skills = () => {
               </p>
               <Carousel
                 autoPlay={true}
-                autoPlaySpeed={2500}
+                autoPlaySpeed={3000}
                 removeArrowOnDeviceType={["mobile"]}
                 responsive={responsive}
                 infinite={true}

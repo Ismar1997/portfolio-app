@@ -10,14 +10,15 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 const Projects = () => {
   const projects = [
     {
-      title: "Pokedecks",
-      technologies: "HTML, CSS, JS, React, Material UI",
+      title: "Weather Watch",
+      technologies: "HTML, CSS, JS, React ",
       description:
-        "Pokedecks is designed Pokédex app for everyone to use. It contains detailed data on every single Pokémon.",
-      imgURL: projImg1,
-      projectgit: "https://github.com/Ismar1997/pokedecks-app",
-      projectdemo: "https://ismar1997.github.io/pokedecks-app/",
+        "Weather Watch is an app that helps you get information about current weather in different places around the world.",
+      imgURL: projImg3,
+      projectgit: "https://github.com/Ismar1997/weather-watch",
+      projectdemo: "https://ismar1997.github.io/weather-watch/",
     },
+
     {
       title: "Vaultify",
       technologies: "HTML, CSS, Javascript, React",
@@ -28,13 +29,13 @@ const Projects = () => {
       projectdemo: "https://ismar1997.github.io/vaultify-app/",
     },
     {
-      title: "Weather Watch",
-      technologies: "HTML, CSS, JS, React ",
+      title: "Pokedecks",
+      technologies: "HTML, CSS, JS, React, Material UI",
       description:
-        "Weather Watch is an app that helps you get information about current weather in different places around the world.",
-      imgURL: projImg3,
-      projectgit: "https://github.com/Ismar1997/weather-watch",
-      projectdemo: "https://ismar1997.github.io/weather-watch/",
+        "Pokedecks is designed Pokédex app for everyone to use. It contains detailed data on every single Pokémon.",
+      imgURL: projImg1,
+      projectgit: "https://github.com/Ismar1997/pokedecks-app",
+      projectdemo: "https://ismar1997.github.io/pokedecks-app/",
     },
     {
       title: "Portfolio",
